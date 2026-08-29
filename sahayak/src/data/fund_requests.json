@@ -1,0 +1,251 @@
+[
+  {
+    "id": "FND001",
+    "requestorId": "CLUB001",
+    "requestorName": "Robotics Club",
+    "requestorType": "club",
+    "item": "Robotics Kits & Components",
+    "quantity": 10,
+    "estimatedCost": 185000,
+    "purpose": "Required for the upcoming Inter-College Robotics Championship and lab sessions for 2nd year students",
+    "urgency": "high",
+    "studentsAffected": 120,
+    "academicImportance": "high",
+    "operationalImportance": "high",
+    "alternativeAvailable": false,
+    "submittedDate": "2025-01-20",
+    "status": "awaiting_sanction",
+    "importance": "high",
+    "priorityScore": 91,
+    "priorityLevel": "HIGH",
+    "priorityFactors": [
+      "High number of students affected (120)",
+      "Academic necessity — required for championship",
+      "No alternative equipment available",
+      "Upcoming deadline in 3 weeks"
+    ],
+    "automatedChecks": {
+      "requestComplete": { "passed": true, "note": "All required fields submitted" },
+      "documentsVerified": { "passed": true, "note": "Supporting documents attached" },
+      "requirementValidated": { "passed": true, "note": "Requirement justified against institutional policy" }
+    },
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "The club has an outstanding track record. Equipment is genuinely needed.",
+    "adminDecision": null,
+    "completionChecklist": {
+      "approvalRecorded": false,
+      "purchaseOrderGenerated": false,
+      "vendorSelected": false,
+      "purchaseCompleted": false,
+      "equipmentReceived": false,
+      "inventoryUpdated": false,
+      "requesterConfirmed": false
+    },
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-20T09:00:00Z", "actor": "Robotics Club" },
+      { "step": "Priority Scoring", "status": "done", "timestamp": "2025-01-20T09:01:00Z", "actor": "System" },
+      { "step": "Faculty Review", "status": "done", "timestamp": "2025-01-23T14:00:00Z", "actor": "Faculty" },
+      { "step": "Administration Sanction", "status": "active", "timestamp": null, "actor": "Administration" },
+      { "step": "Completion Checklist", "status": "pending", "timestamp": null, "actor": null },
+      { "step": "Completed", "status": "pending", "timestamp": null, "actor": null }
+    ]
+  },
+  {
+    "id": "FND002",
+    "requestorId": "HST001",
+    "requestorName": "Boys Hostel Block A",
+    "requestorType": "hostel",
+    "item": "Industrial Water Purifiers",
+    "quantity": 4,
+    "estimatedCost": 72000,
+    "purpose": "Current purifiers are non-functional. 420 hostel residents are using unfiltered water which is a health hazard.",
+    "urgency": "critical",
+    "studentsAffected": 420,
+    "academicImportance": "moderate",
+    "operationalImportance": "critical",
+    "alternativeAvailable": false,
+    "submittedDate": "2025-01-18",
+    "status": "awaiting_sanction",
+    "importance": "high",
+    "priorityScore": 94,
+    "priorityLevel": "HIGH",
+    "priorityFactors": [
+      "Critical health & safety concern",
+      "420 students affected — highest student impact",
+      "No alternative — existing purifiers non-functional",
+      "Operational necessity, not optional"
+    ],
+    "automatedChecks": {
+      "requestComplete": { "passed": true, "note": "All required fields submitted" },
+      "documentsVerified": { "passed": true, "note": "Maintenance reports and quotations attached" },
+      "requirementValidated": { "passed": true, "note": "Emergency operational necessity confirmed" }
+    },
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "Urgent. Personally verified the situation. Immediate action required.",
+    "adminDecision": null,
+    "completionChecklist": {
+      "approvalRecorded": false,
+      "purchaseOrderGenerated": false,
+      "vendorSelected": false,
+      "purchaseCompleted": false,
+      "equipmentReceived": false,
+      "inventoryUpdated": false,
+      "requesterConfirmed": false
+    },
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-18T08:30:00Z", "actor": "Hostel Warden" },
+      { "step": "Priority Scoring", "status": "done", "timestamp": "2025-01-18T08:31:00Z", "actor": "System" },
+      { "step": "Faculty Review", "status": "done", "timestamp": "2025-01-20T10:00:00Z", "actor": "Faculty" },
+      { "step": "Administration Sanction", "status": "active", "timestamp": null, "actor": "Administration" },
+      { "step": "Completion Checklist", "status": "pending", "timestamp": null, "actor": null },
+      { "step": "Completed", "status": "pending", "timestamp": null, "actor": null }
+    ]
+  },
+  {
+    "id": "FND003",
+    "requestorId": "LAB001",
+    "requestorName": "Electronics Lab",
+    "requestorType": "lab",
+    "item": "Digital Storage Oscilloscopes",
+    "quantity": 6,
+    "estimatedCost": 210000,
+    "purpose": "Lab equipment is outdated (10+ years old). New oscilloscopes are required for advanced electronics curriculum experiments.",
+    "urgency": "high",
+    "studentsAffected": 180,
+    "academicImportance": "high",
+    "operationalImportance": "high",
+    "alternativeAvailable": false,
+    "submittedDate": "2025-01-16",
+    "status": "completed",
+    "importance": "high",
+    "priorityScore": 87,
+    "priorityLevel": "HIGH",
+    "priorityFactors": [
+      "Required for curriculum — academic necessity",
+      "180 students affected across 3 batches",
+      "Existing equipment non-functional",
+      "University accreditation requirement"
+    ],
+    "automatedChecks": {
+      "requestComplete": { "passed": true, "note": "All required fields submitted" },
+      "documentsVerified": { "passed": true, "note": "Curriculum documents and quotations attached" },
+      "requirementValidated": { "passed": true, "note": "Accreditation requirement validated" }
+    },
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "Critical for NAAC accreditation lab requirements.",
+    "adminDecision": "APPROVED",
+    "adminNote": "Sanctioned. Prioritize procurement before semester end.",
+    "completionChecklist": {
+      "approvalRecorded": true,
+      "purchaseOrderGenerated": true,
+      "vendorSelected": true,
+      "purchaseCompleted": true,
+      "equipmentReceived": true,
+      "inventoryUpdated": true,
+      "requesterConfirmed": true
+    },
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-16T10:00:00Z", "actor": "Lab In-Charge" },
+      { "step": "Priority Scoring", "status": "done", "timestamp": "2025-01-16T10:01:00Z", "actor": "System" },
+      { "step": "Faculty Review", "status": "done", "timestamp": "2025-01-19T09:00:00Z", "actor": "Faculty" },
+      { "step": "Administration Sanction", "status": "done", "timestamp": "2025-01-22T11:00:00Z", "actor": "Dean" },
+      { "step": "Completion Checklist", "status": "done", "timestamp": "2025-02-01T10:00:00Z", "actor": "System" },
+      { "step": "Completed", "status": "done", "timestamp": "2025-02-10T12:00:00Z", "actor": "Lab In-Charge" }
+    ]
+  },
+  {
+    "id": "FND004",
+    "requestorId": "CLUB002",
+    "requestorName": "Coding Club",
+    "requestorType": "club",
+    "item": "Event Equipment & Decorations for Hackathon",
+    "quantity": 1,
+    "estimatedCost": 35000,
+    "purpose": "Annual hackathon event setup including screens, banners, and seating arrangement.",
+    "urgency": "low",
+    "studentsAffected": 200,
+    "academicImportance": "low",
+    "operationalImportance": "low",
+    "alternativeAvailable": true,
+    "submittedDate": "2025-01-22",
+    "status": "faculty_review",
+    "importance": "high",
+    "priorityScore": 42,
+    "priorityLevel": "LOW",
+    "priorityFactors": [
+      "Event is non-academic (optional activity)",
+      "Alternatives available — rental possible",
+      "Low urgency — event is 6 weeks away",
+      "Does not affect core academic operations"
+    ],
+    "automatedChecks": {
+      "requestComplete": { "passed": true, "note": "All fields submitted" },
+      "documentsVerified": { "passed": true, "note": "Event proposal attached" },
+      "requirementValidated": { "passed": true, "note": "Request processed" }
+    },
+    "facultyRecommendation": null,
+    "facultyNote": null,
+    "adminDecision": null,
+    "completionChecklist": {
+      "approvalRecorded": false,
+      "purchaseOrderGenerated": false,
+      "vendorSelected": false,
+      "purchaseCompleted": false,
+      "equipmentReceived": false,
+      "inventoryUpdated": false,
+      "requesterConfirmed": false
+    },
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-22T11:00:00Z", "actor": "Coding Club Head" },
+      { "step": "Priority Scoring", "status": "done", "timestamp": "2025-01-22T11:01:00Z", "actor": "System" },
+      { "step": "Faculty Review", "status": "active", "timestamp": null, "actor": "Faculty" },
+      { "step": "Administration Sanction", "status": "pending", "timestamp": null, "actor": "Administration" },
+      { "step": "Completion Checklist", "status": "pending", "timestamp": null, "actor": null },
+      { "step": "Completed", "status": "pending", "timestamp": null, "actor": null }
+    ]
+  },
+  {
+    "id": "FND005",
+    "requestorId": "DEPT001",
+    "requestorName": "CSE Department",
+    "requestorType": "department",
+    "item": "Interactive Smart Board",
+    "quantity": 2,
+    "estimatedCost": 90000,
+    "purpose": "Replace old projectors in two main lecture halls. Smart boards improve teaching quality and student engagement.",
+    "urgency": "moderate",
+    "studentsAffected": 320,
+    "academicImportance": "high",
+    "operationalImportance": "moderate",
+    "alternativeAvailable": true,
+    "submittedDate": "2025-01-19",
+    "status": "rejected",
+    "importance": "high",
+    "priorityScore": 58,
+    "priorityLevel": "MODERATE",
+    "priorityFactors": [
+      "320 students benefit",
+      "Existing projectors still functional (alternative available)",
+      "Upgrade, not replacement of broken equipment",
+      "Moderate urgency"
+    ],
+    "automatedChecks": {
+      "requestComplete": { "passed": true, "note": "All fields submitted" },
+      "documentsVerified": { "passed": true, "note": "Quotations attached" },
+      "requirementValidated": { "passed": true, "note": "Request processed" }
+    },
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "Would benefit teaching quality significantly.",
+    "adminDecision": "REJECTED",
+    "adminNote": "Current projectors are functional. This is deferred to next financial year budget cycle.",
+    "rejectionReason": "Deferred to next financial year. Existing equipment is functional and meets current requirements.",
+    "completionChecklist": null,
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-19T10:00:00Z", "actor": "HOD CSE" },
+      { "step": "Priority Scoring", "status": "done", "timestamp": "2025-01-19T10:01:00Z", "actor": "System" },
+      { "step": "Faculty Review", "status": "done", "timestamp": "2025-01-21T09:00:00Z", "actor": "Faculty" },
+      { "step": "Administration Sanction", "status": "done", "timestamp": "2025-01-25T16:00:00Z", "actor": "Dean" },
+      { "step": "Rejected", "status": "done", "timestamp": "2025-01-25T16:00:00Z", "actor": "Administration" }
+    ]
+  }
+]
