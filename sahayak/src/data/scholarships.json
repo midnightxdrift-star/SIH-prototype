@@ -1,0 +1,128 @@
+[
+  {
+    "id": "SCH001",
+    "studentId": "STU002",
+    "studentName": "Priya Nair",
+    "scholarshipName": "National Merit Scholarship",
+    "submittedDate": "2025-01-15",
+    "status": "faculty_review",
+    "importance": "moderate",
+    "annualIncome": 280000,
+    "cgpa": 9.2,
+    "category": "OBC",
+    "documents": {
+      "incomeCertificate": true,
+      "academicRecords": true,
+      "bankDetails": true,
+      "identityProof": true,
+      "categoryCertificate": true,
+      "photographs": true
+    },
+    "automatedChecks": {
+      "documentsComplete": { "passed": true, "note": "All 6 required documents submitted" },
+      "eligibilityCheck": { "passed": true, "note": "Annual income ₹2,80,000 within ₹5,00,000 limit" },
+      "academicCriteria": { "passed": true, "note": "CGPA 9.2 exceeds minimum 6.0 requirement" },
+      "deadlineCheck": { "passed": true, "note": "Submitted 15 days before deadline" },
+      "duplicateCheck": { "passed": true, "note": "No duplicate application found" },
+      "consistencyCheck": { "passed": true, "note": "All submitted information is consistent" }
+    },
+    "autoVerificationResult": "PASSED",
+    "autoVerificationScore": 6,
+    "autoVerificationTotal": 6,
+    "facultyRecommendation": null,
+    "facultyNote": null,
+    "adminDecision": null,
+    "adminNote": null,
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-15T10:30:00Z", "actor": "Student" },
+      { "step": "Automated Verification", "status": "done", "timestamp": "2025-01-15T10:30:45Z", "actor": "System" },
+      { "step": "Faculty Verification", "status": "active", "timestamp": null, "actor": "Faculty" },
+      { "step": "Administration Review", "status": "pending", "timestamp": null, "actor": "Administration" },
+      { "step": "Completed", "status": "pending", "timestamp": null, "actor": null }
+    ]
+  },
+  {
+    "id": "SCH002",
+    "studentId": "STU008",
+    "studentName": "Divya Krishnan",
+    "scholarshipName": "SC/ST Merit Scholarship",
+    "submittedDate": "2025-01-12",
+    "status": "admin_review",
+    "importance": "moderate",
+    "annualIncome": 150000,
+    "cgpa": 6.9,
+    "category": "ST",
+    "documents": {
+      "incomeCertificate": true,
+      "academicRecords": true,
+      "bankDetails": true,
+      "identityProof": true,
+      "categoryCertificate": true,
+      "photographs": true
+    },
+    "automatedChecks": {
+      "documentsComplete": { "passed": true, "note": "All 6 required documents submitted" },
+      "eligibilityCheck": { "passed": true, "note": "Annual income ₹1,50,000 within ₹8,00,000 limit" },
+      "academicCriteria": { "passed": true, "note": "CGPA 6.9 exceeds minimum 5.5 requirement" },
+      "deadlineCheck": { "passed": true, "note": "Submitted on time" },
+      "duplicateCheck": { "passed": true, "note": "No duplicate application found" },
+      "consistencyCheck": { "passed": true, "note": "All information consistent" }
+    },
+    "autoVerificationResult": "PASSED",
+    "autoVerificationScore": 6,
+    "autoVerificationTotal": 6,
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "Documents verified in person. Student is genuinely eligible.",
+    "adminDecision": null,
+    "adminNote": null,
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-12T09:00:00Z", "actor": "Student" },
+      { "step": "Automated Verification", "status": "done", "timestamp": "2025-01-12T09:01:00Z", "actor": "System" },
+      { "step": "Faculty Verification", "status": "done", "timestamp": "2025-01-18T14:30:00Z", "actor": "Faculty" },
+      { "step": "Administration Review", "status": "active", "timestamp": null, "actor": "Administration" },
+      { "step": "Completed", "status": "pending", "timestamp": null, "actor": null }
+    ]
+  },
+  {
+    "id": "SCH003",
+    "studentId": "STU004",
+    "studentName": "Sneha Reddy",
+    "scholarshipName": "State Government Merit Scholarship",
+    "submittedDate": "2025-01-10",
+    "status": "completed",
+    "importance": "moderate",
+    "annualIncome": 320000,
+    "cgpa": 8.4,
+    "category": "SC",
+    "documents": {
+      "incomeCertificate": true,
+      "academicRecords": true,
+      "bankDetails": true,
+      "identityProof": true,
+      "categoryCertificate": true,
+      "photographs": true
+    },
+    "automatedChecks": {
+      "documentsComplete": { "passed": true, "note": "All required documents submitted" },
+      "eligibilityCheck": { "passed": true, "note": "Income within limit" },
+      "academicCriteria": { "passed": true, "note": "CGPA satisfies requirement" },
+      "deadlineCheck": { "passed": true, "note": "Submitted before deadline" },
+      "duplicateCheck": { "passed": true, "note": "No duplicate found" },
+      "consistencyCheck": { "passed": true, "note": "Information consistent" }
+    },
+    "autoVerificationResult": "PASSED",
+    "autoVerificationScore": 6,
+    "autoVerificationTotal": 6,
+    "facultyRecommendation": "APPROVE",
+    "facultyNote": "Verified. Eligible candidate.",
+    "adminDecision": "APPROVED",
+    "adminNote": "Approved for disbursement.",
+    "timeline": [
+      { "step": "Submitted", "status": "done", "timestamp": "2025-01-10T10:00:00Z", "actor": "Student" },
+      { "step": "Automated Verification", "status": "done", "timestamp": "2025-01-10T10:01:00Z", "actor": "System" },
+      { "step": "Faculty Verification", "status": "done", "timestamp": "2025-01-16T11:00:00Z", "actor": "Faculty" },
+      { "step": "Administration Review", "status": "done", "timestamp": "2025-01-22T15:00:00Z", "actor": "Administration" },
+      { "step": "Completed", "status": "done", "timestamp": "2025-01-24T10:00:00Z", "actor": "System" }
+    ]
+  }
+]
