@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { useRole, ROLES } from '../context/RoleContext';
-import { CheckCircle2, XCircle, AlertTriangle, ChevronDown, TrendingUp, IndianRupee, Users, Zap, Info, Send, Check } from 'lucide-react';
+import { CheckCircle2, XCircle, Info, Send, Check, Lock } from 'lucide-react';
 import ImportanceBadge from '../components/ui/ImportanceBadge';
 import StatusBadge from '../components/ui/StatusBadge';
 import WorkflowTimeline from '../components/ui/WorkflowTimeline';
@@ -89,17 +89,31 @@ function ActionModal({ title, onSubmit, onClose }) {
 
 export default function FundSanctioning() {
   const { fundRequests, facultyReviewFund, adminSanctionFund, updateChecklistItem } = useApp();
-  const { role } = useRole();
-  const [selectedId, setSelectedId] = useState(fundRequests[0]?.id);
+  const { role, currentUser } = useRole();
   const [modal, setModal] = useState(null);
 
-  const sorted = [...fundRequests].sort((a, b) => {
+  const isAdmin = role === ROLES.ADMIN;
+  const isFaculty = role === ROLES.FACULTY;
+  const isClubHead = role === ROLES.CLUB_HEAD;
+  const isStudent = role === ROLES.STUDENT;
+
+  // Role-based visibility
+  const visibleRequests = isAdmin
+    ? fundRequests
+    : isFaculty
+    ? fundRequests.filter(r => ['faculty_review', 'awaiting_sanction', 'completion_in_progress', 'completed', 'rejected'].includes(r.status))
+    : isClubHead
+    ? fundRequests.filter(r => currentUser.fundRequestIds?.includes(r.id))
+    : []; // Students don't see fund requests
+
+  const sorted = [...visibleRequests].sort((a, b) => {
     if (a.status === 'rejected' && b.status !== 'rejected') return 1;
     if (b.status === 'rejected' && a.status !== 'rejected') return -1;
     return b.priorityScore - a.priorityScore;
   });
 
-  const current = fundRequests.find(r => r.id === selectedId) || fundRequests[0];
+  const [selectedId, setSelectedId] = useState(sorted[0]?.id);
+  const current = sorted.find(r => r.id === selectedId) || sorted[0];
 
   const checklistLabels = {
     approvalRecorded: 'Approval recorded',
@@ -136,6 +150,28 @@ export default function FundSanctioning() {
     .filter(r => r.status === 'completed' || r.adminDecision === 'APPROVED')
     .reduce((acc, r) => acc + r.estimatedCost, 0);
 
+  if (isStudent || (isClubHead && visibleRequests.length === 0)) {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <h1 className="page-title">Smart Fund Sanctioning</h1>
+          <ImportanceBadge level="high" />
+        </div>
+        <div className="card p-10 text-center">
+          <Lock className="w-10 h-10 text-gray-300 mx-auto mb-3" />
+          <p className="font-semibold text-gray-600">
+            {isStudent ? 'Access Denied' : 'No fund requests found'}
+          </p>
+          <p className="text-sm text-gray-400 mt-1">
+            {isStudent 
+              ? 'Students do not have access to institutional fund sanctioning.'
+              : 'Your club/department has no active fund requests.'}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-6xl mx-auto">
       {modal && (
@@ -155,6 +191,25 @@ export default function FundSanctioning() {
           <p className="text-sm text-gray-500">Priority-based institutional resource requests with higher-authority sanctioning</p>
         </div>
       </div>
+
+      {/* Visibility notice */}
+      {!isAdmin && (
+        <div className={`rounded-xl p-4 border flex items-start gap-3 mb-6 ${
+          isClubHead ? 'bg-brand-50 border-brand-100' : 'bg-amber-50 border-amber-100'
+        }`}>
+          <Lock className={`w-4 h-4 mt-0.5 shrink-0 ${isClubHead ? 'text-brand-500' : 'text-amber-500'}`} />
+          <div>
+            <p className={`text-sm font-semibold ${isClubHead ? 'text-brand-800' : 'text-amber-800'}`}>
+              {isClubHead
+                ? 'You can only view fund requests from your club/department.'
+                : 'You can view requests pending your verification.'}
+            </p>
+            <p className={`text-xs mt-0.5 ${isClubHead ? 'text-brand-600' : 'text-amber-700'}`}>
+              Other requests are confidential. Administration has full visibility.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* System explanation */}
       <div className="bg-red-50 border border-red-100 rounded-xl p-4 mb-6">
