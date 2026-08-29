@@ -49,11 +49,11 @@ export default function Sidebar() {
   return (
     <aside className="w-60 shrink-0 h-screen bg-white border-r border-gray-100 flex flex-col sticky top-0 overflow-y-auto">
       {/* Logo */}
-      <div className="px-4 py-4 border-b border-gray-100">
+      <div className="px-4 py-4 border-b border-gray-100 flex justify-center">
         <img
           src="/logo.png"
           alt="Sahayak — Smart Institutional Workflow"
-          className="h-12 w-auto object-contain"
+          className="h-20 w-auto object-contain"
         />
       </div>
 
