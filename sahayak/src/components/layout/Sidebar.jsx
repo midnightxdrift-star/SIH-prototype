@@ -49,19 +49,12 @@ export default function Sidebar() {
   return (
     <aside className="w-60 shrink-0 h-screen bg-white border-r border-gray-100 flex flex-col sticky top-0 overflow-y-auto">
       {/* Logo */}
-      <div className="px-5 py-5 border-b border-gray-100">
-        <div className="flex items-center gap-2.5">
-          {/* Geometric logo mark */}
-          <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-            <div className="w-4 h-4 border-2 border-white rounded-sm relative">
-              <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-white rounded-full" />
-            </div>
-          </div>
-          <div>
-            <p className="font-bold text-gray-900 text-base leading-tight tracking-tight">Sahayak</p>
-            <p className="text-[10px] text-gray-400 leading-tight">Institutional Workflow</p>
-          </div>
-        </div>
+      <div className="px-4 py-4 border-b border-gray-100">
+        <img
+          src="/logo.png"
+          alt="Sahayak — Smart Institutional Workflow"
+          className="h-12 w-auto object-contain"
+        />
       </div>
 
       {/* Navigation */}
